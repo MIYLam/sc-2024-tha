@@ -1,6 +1,7 @@
 package folder
 
-import "github.com/gofrs/uuid"
+import ("fmt"
+	"github.com/gofrs/uuid")
 
 func GetAllFolders() []Folder {
 	return GetSampleData()
@@ -21,7 +22,7 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) []Folder {
 }
 
 func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) []Folder {
-	// Your code here...
+	fmt.Println(name)	
 
 	return []Folder{}
 }

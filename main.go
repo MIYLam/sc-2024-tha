@@ -14,9 +14,12 @@ func main() {
 
 	// example usage
 	folderDriver := folder.NewDriver(res)
-	orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+	// orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+	var name string;
+	fmt.Scanf("%s", &name)
+	folderDriver.GetAllChildFolders(orgID, name)
 
-	folder.PrettyPrint(res)
-	fmt.Printf("\n Folders for orgID: %s", orgID)
-	folder.PrettyPrint(orgFolder)
+	// folder.PrettyPrint(res)
+	// fmt.Printf("\n Folders for orgID: %s", orgID)
+	// folder.PrettyPrint(orgFolder)
 }
