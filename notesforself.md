@@ -1,2 +1,0 @@
-- The f(*driver) is to show that we are defining the functions that are created in the IDriver Interface whenever we call NewDriver
-- The filepaths that are printed at the start are used by the get sample data function, don't need to touch. 

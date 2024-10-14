@@ -100,7 +100,7 @@ func MarshalJson(b interface{}) []byte {
 
 func PrettyPrint(b interface{}) {
 	s := MarshalJson(b)
-	fmt.Print(string(s))
+	fmt.Println(string(s))
 }
 
 func GetSampleData() []Folder {
