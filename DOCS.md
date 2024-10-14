@@ -8,10 +8,12 @@
 - Find all the ones with the target directory + something after it
 - Print that out
 ## Reasoning:
-    - Spec says all children, and examples have grandchildren included as well 
+- Assuming a correct tree structure, every child/grandchild will have the target directory as a parent.
+    - Thus, the parent always will appear in the path before. 
 # Progress track by commit
 ## f86913
 - Never used Go before, so needed some time to look through the structure of the package
 - Looking at basic IO and calling the target functions.
 
-## 
+## 3b58faf
+- First try of initial approach
