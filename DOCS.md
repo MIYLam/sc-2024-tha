@@ -23,6 +23,9 @@
     - Reasoning: Still achieves what is being asked on the task
         - In the case that the duplicates are parent/child, neither will be printed when listing the children 
         - Purpose of the function isn't to fix the database having duplicate names
+    - EDIT: there will be no duplicates
+- Folders that don't exist or are not in the organisation named are treated the the same. 
+    - Reasoning: Organisations exist to separate people's permission levels to access certain content. 
 
 
 ## Move folder 
@@ -55,3 +58,5 @@
 
 ## 3b58faf
 - First try of initial approach
+
+## d630ddc

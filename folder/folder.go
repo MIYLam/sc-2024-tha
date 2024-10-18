@@ -8,13 +8,17 @@ type IDriver interface {
 	// component 1
 	// Implement the following methods:
 	// GetAllChildFolders returns all child folders of a specific folder.
-	GetAllChildFolders(orgID uuid.UUID, name string) []Folder
+	FindFolderByName(name string, folder_range []Folder) Folder
+
+	GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, error)
 
 	// component 2
 	// Implement the following methods:
 	// MoveFolder moves a folder to a new destination.
 	MoveFolder(name string, dst string) ([]Folder, error)
+
 }
+
 
 type driver struct {
 	// define attributes here
