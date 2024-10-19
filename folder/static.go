@@ -18,7 +18,7 @@ import (
 // If you do make changes here, be ready to discuss why these changes were made.
 
 // how many trees you want to generate
-const MaxRootSet = 4
+const MaxRootSet = 1
 
 // maximum possible children per node
 const MaxChild = 4

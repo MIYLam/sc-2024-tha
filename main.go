@@ -3,7 +3,7 @@ package main
 import (
 	// "fmt"
 
-	// "github.com/georgechieng-sc/interns-2022/folder"
+	"github.com/georgechieng-sc/interns-2022/folder"
 	// "github.com/gofrs/uuid"
 )
 
@@ -12,14 +12,17 @@ func main() {
 
 	// res := folder.GetAllFolders()
 
-	// example usage
+	// // example usage
 	// folderDriver := folder.NewDriver(res)
-	// orgFolder := folderDriver.GetFoldersByOrgID(orgID)
-	// var name string;
-	// fmt.Scanf("%s", &name)
-	// contains := folderDriver.GetAllChildFolders(orgID, "crucial-the-shadow")
+	// // orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+	// contains, error := folderDriver.GetAllChildFolders(orgID, name)
 
-	// folder.PrettyPrint(contains)
-	// fmt.Printf("\n Folders for orgID: %s", orgID)
-	// folder.PrettyPrint(orgFolder)
+	// // folder.PrettyPrint(contains)
+	// // fmt.Printf("\n Folders for orgID: %s", orgID)
+	// // folder.PrettyPrint(orgFolder)
+	res := folder.GenerateData()
+
+    folder.PrettyPrint(res)
+
+    folder.WriteSampleData(res)
 }
