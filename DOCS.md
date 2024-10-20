@@ -6,7 +6,8 @@
 - Program will execute based on first instance of the directory named in the input
     - I don't think I have the capacity to try and fix the database and clear it of duplicates
 
-- IDEAL SOLUTION: Probably could make this into a tree strucutre for more efficient operations
+## Not covered
+- IDEAL SOLUTION: Probably could make this into a tree structure for more efficient operations
     - Don't really know how pointers and classes work in go lang, also very little time. 
     - Ideally how I would do it 
         - Make a node struct in folder.go that would be a node for each folder
@@ -15,6 +16,7 @@
             - Have a helper function here to help read and change the strings. 
         - For GetAllChildren, can just recusively go through 
         - For Move folder, change the pointer and recusively change the strings
+- Type checking when passing through functions 
 
 
 # Approach explantions
@@ -59,9 +61,13 @@
     - Remove from original parent 
 
 ### Reasonings 
-
+- Replacing the parent essentially means that the path for all children will change to be the grandparent
+    - As the tree strcutre needs to remain the same, the only part that should be changed is the parent/grandparent components.
 ### Edge cases
-
+- Same folder
+- Empty folder
+- Moving to children 
+    - Counts as an invalid case since there is no path for the new subtree to follow
 ### Analysis 
 - Not too efficient
     - Need to iterate through every single file to find 
@@ -71,13 +77,3 @@
 - Used the testify module as it felt more familiar with testing done before 
 - All the data is in the tesitng file itself, admittedly could do better 
 
-
-# Progress track by commit
-## f86913
-- Never used Go before, so needed some time to look through the structure of the package
-- Looking at basic IO and calling the target functions.
-
-## 3b58faf
-- First try of initial approach
-
-## d630ddc
